@@ -1,0 +1,17 @@
+<?php
+
+namespace Test;
+
+use PHPUnit\Framework\TestCase;
+
+class %NOMTEST% extends TestCase
+{
+
+    public function test__construct()
+    {
+        $exception = new \HttpException\%NOM%('coucou');
+        self::assertEquals('%MESSAGE%', $exception->getMessageStatus());
+        self::assertEquals(%CODE%, $exception->getCode());
+        self::assertEquals('coucou', $exception->getMessage());
+    }
+}

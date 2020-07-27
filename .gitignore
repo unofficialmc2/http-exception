@@ -1,0 +1,9 @@
+# OS
+
+# IDE
+
+# Composer
+/vendor/
+
+# PROJECT
+/php_errors.log
