@@ -14,11 +14,10 @@ class UnavailableForLegalReasonsException extends HttpException
     /**
      * UnavailableForLegalReasonsException constructor.
      * @param string $message
-     * @param int $code = 451
      * @param \Throwable|null $previous
      * @noinspection PhpUnusedParameterInspection
      */
-    public function __construct($message = "", $code = 451, Throwable $previous = null)
+    public function __construct($message = "", ?Throwable $previous = null)
     {
         parent::__construct($message, 451, $previous);
     }

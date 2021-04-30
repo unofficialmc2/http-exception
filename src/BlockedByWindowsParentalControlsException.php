@@ -14,11 +14,10 @@ class BlockedByWindowsParentalControlsException extends HttpException
     /**
      * BlockedByWindowsParentalControlsException constructor.
      * @param string $message
-     * @param int $code = 450
      * @param \Throwable|null $previous
      * @noinspection PhpUnusedParameterInspection
      */
-    public function __construct($message = "", $code = 450, Throwable $previous = null)
+    public function __construct($message = "", ?Throwable $previous = null)
     {
         parent::__construct($message, 450, $previous);
     }

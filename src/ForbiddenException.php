@@ -14,11 +14,10 @@ class ForbiddenException extends HttpException
     /**
      * ForbiddenException constructor.
      * @param string $message
-     * @param int $code = 403
      * @param \Throwable|null $previous
      * @noinspection PhpUnusedParameterInspection
      */
-    public function __construct($message = "", $code = 403, Throwable $previous = null)
+    public function __construct($message = "", ?Throwable $previous = null)
     {
         parent::__construct($message, 403, $previous);
     }

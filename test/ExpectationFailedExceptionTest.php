@@ -7,7 +7,10 @@ use PHPUnit\Framework\TestCase;
 class ExpectationFailedExceptionTest extends TestCase
 {
 
-    public function test__construct()
+    /**
+     * test de __construct
+     **/
+    public function testConstruct(): void
     {
         $exception = new \HttpException\ExpectationFailedException('coucou');
         self::assertEquals('Expectation failed', $exception->getMessageStatus());

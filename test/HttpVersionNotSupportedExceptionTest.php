@@ -7,7 +7,10 @@ use PHPUnit\Framework\TestCase;
 class HttpVersionNotSupportedExceptionTest extends TestCase
 {
 
-    public function test__construct()
+    /**
+     * test de __construct
+     **/
+    public function testConstruct(): void
     {
         $exception = new \HttpException\HttpVersionNotSupportedException('coucou');
         self::assertEquals('HTTP Version not supported', $exception->getMessageStatus());

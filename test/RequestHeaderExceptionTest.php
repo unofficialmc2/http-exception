@@ -7,7 +7,10 @@ use PHPUnit\Framework\TestCase;
 class RequestHeaderExceptionTest extends TestCase
 {
 
-    public function test__construct()
+    /**
+     * test de __construct
+     **/
+    public function testConstruct(): void
     {
         $exception = new \HttpException\RequestHeaderException('coucou');
         self::assertEquals('Request Header', $exception->getMessageStatus());

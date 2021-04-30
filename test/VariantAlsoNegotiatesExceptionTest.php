@@ -7,7 +7,10 @@ use PHPUnit\Framework\TestCase;
 class VariantAlsoNegotiatesExceptionTest extends TestCase
 {
 
-    public function test__construct()
+    /**
+     * test de __construct
+     **/
+    public function testConstruct(): void
     {
         $exception = new \HttpException\VariantAlsoNegotiatesException('coucou');
         self::assertEquals('Variant Also Negotiates', $exception->getMessageStatus());

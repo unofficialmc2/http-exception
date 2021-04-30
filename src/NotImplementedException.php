@@ -14,11 +14,10 @@ class NotImplementedException extends HttpException
     /**
      * NotImplementedException constructor.
      * @param string $message
-     * @param int $code = 501
      * @param \Throwable|null $previous
      * @noinspection PhpUnusedParameterInspection
      */
-    public function __construct($message = "", $code = 501, Throwable $previous = null)
+    public function __construct($message = "", ?Throwable $previous = null)
     {
         parent::__construct($message, 501, $previous);
     }

@@ -7,7 +7,10 @@ use PHPUnit\Framework\TestCase;
 class ImATeapotExceptionTest extends TestCase
 {
 
-    public function test__construct()
+    /**
+     * test de __construct
+     **/
+    public function testConstruct(): void
     {
         $exception = new \HttpException\ImATeapotException('coucou');
         self::assertEquals('I\'m a teapot', $exception->getMessageStatus());

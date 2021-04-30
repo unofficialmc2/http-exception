@@ -7,7 +7,10 @@ use PHPUnit\Framework\TestCase;
 class ConflictExceptionTest extends TestCase
 {
 
-    public function test__construct()
+    /**
+     * test de __construct
+     **/
+    public function testConstruct(): void
     {
         $exception = new \HttpException\ConflictException('coucou');
         self::assertEquals('Conflict', $exception->getMessageStatus());

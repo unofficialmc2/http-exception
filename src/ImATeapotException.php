@@ -14,11 +14,10 @@ class ImATeapotException extends HttpException
     /**
      * ImATeapotException constructor.
      * @param string $message
-     * @param int $code = 418
      * @param \Throwable|null $previous
      * @noinspection PhpUnusedParameterInspection
      */
-    public function __construct($message = "", $code = 418, Throwable $previous = null)
+    public function __construct($message = "", ?Throwable $previous = null)
     {
         parent::__construct($message, 418, $previous);
     }

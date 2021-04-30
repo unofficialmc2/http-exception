@@ -7,7 +7,10 @@ use PHPUnit\Framework\TestCase;
 class MethodNotAllowedExceptionTest extends TestCase
 {
 
-    public function test__construct()
+    /**
+     * test de __construct
+     **/
+    public function testConstruct(): void
     {
         $exception = new \HttpException\MethodNotAllowedException('coucou');
         self::assertEquals('Method Not Allowed', $exception->getMessageStatus());

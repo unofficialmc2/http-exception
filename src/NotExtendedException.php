@@ -14,11 +14,10 @@ class NotExtendedException extends HttpException
     /**
      * NotExtendedException constructor.
      * @param string $message
-     * @param int $code = 510
      * @param \Throwable|null $previous
      * @noinspection PhpUnusedParameterInspection
      */
-    public function __construct($message = "", $code = 510, Throwable $previous = null)
+    public function __construct($message = "", ?Throwable $previous = null)
     {
         parent::__construct($message, 510, $previous);
     }

@@ -14,11 +14,10 @@ class RequestUriTooLongException extends HttpException
     /**
      * RequestUriTooLongException constructor.
      * @param string $message
-     * @param int $code = 414
      * @param \Throwable|null $previous
      * @noinspection PhpUnusedParameterInspection
      */
-    public function __construct($message = "", $code = 414, Throwable $previous = null)
+    public function __construct($message = "", ?Throwable $previous = null)
     {
         parent::__construct($message, 414, $previous);
     }

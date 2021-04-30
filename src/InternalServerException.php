@@ -14,11 +14,10 @@ class InternalServerException extends HttpException
     /**
      * InternalServerException constructor.
      * @param string $message
-     * @param int $code = 500
      * @param \Throwable|null $previous
      * @noinspection PhpUnusedParameterInspection
      */
-    public function __construct($message = "", $code = 500, Throwable $previous = null)
+    public function __construct($message = "", ?Throwable $previous = null)
     {
         parent::__construct($message, 500, $previous);
     }

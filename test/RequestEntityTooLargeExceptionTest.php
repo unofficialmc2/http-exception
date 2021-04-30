@@ -7,7 +7,10 @@ use PHPUnit\Framework\TestCase;
 class RequestEntityTooLargeExceptionTest extends TestCase
 {
 
-    public function test__construct()
+    /**
+     * test de __construct
+     **/
+    public function testConstruct(): void
     {
         $exception = new \HttpException\RequestEntityTooLargeException('coucou');
         self::assertEquals('Request Entity Too Large', $exception->getMessageStatus());

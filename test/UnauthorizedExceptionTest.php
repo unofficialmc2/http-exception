@@ -7,7 +7,10 @@ use PHPUnit\Framework\TestCase;
 class UnauthorizedExceptionTest extends TestCase
 {
 
-    public function test__construct()
+    /**
+     * test de __construct
+     **/
+    public function testConstruct(): void
     {
         $exception = new \HttpException\UnauthorizedException('coucou');
         self::assertEquals('Unauthorized', $exception->getMessageStatus());

@@ -7,7 +7,10 @@ use PHPUnit\Framework\TestCase;
 class NetworkAuthenticationRequiredExceptionTest extends TestCase
 {
 
-    public function test__construct()
+    /**
+     * test de __construct
+     **/
+    public function testConstruct(): void
     {
         $exception = new \HttpException\NetworkAuthenticationRequiredException('coucou');
         self::assertEquals('Network authentication required', $exception->getMessageStatus());

@@ -14,11 +14,10 @@ class GoneException extends HttpException
     /**
      * GoneException constructor.
      * @param string $message
-     * @param int $code = 410
      * @param \Throwable|null $previous
      * @noinspection PhpUnusedParameterInspection
      */
-    public function __construct($message = "", $code = 410, Throwable $previous = null)
+    public function __construct($message = "", ?Throwable $previous = null)
     {
         parent::__construct($message, 410, $previous);
     }

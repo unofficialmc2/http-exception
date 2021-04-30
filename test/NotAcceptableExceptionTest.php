@@ -7,7 +7,10 @@ use PHPUnit\Framework\TestCase;
 class NotAcceptableExceptionTest extends TestCase
 {
 
-    public function test__construct()
+    /**
+     * test de __construct
+     **/
+    public function testConstruct(): void
     {
         $exception = new \HttpException\NotAcceptableException('coucou');
         self::assertEquals('Not Acceptable', $exception->getMessageStatus());
