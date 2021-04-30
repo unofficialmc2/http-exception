@@ -7,7 +7,10 @@ use PHPUnit\Framework\TestCase;
 class GatewayTimeOutExceptionTest extends TestCase
 {
 
-    public function test__construct()
+    /**
+     * test de __construct
+     **/
+    public function testConstruct(): void
     {
         $exception = new \HttpException\GatewayTimeOutException('coucou');
         self::assertEquals('Gateway Time-out', $exception->getMessageStatus());

@@ -7,7 +7,10 @@ use PHPUnit\Framework\TestCase;
 class ServiceUnavailableExceptionTest extends TestCase
 {
 
-    public function test__construct()
+    /**
+     * test de __construct
+     **/
+    public function testConstruct(): void
     {
         $exception = new \HttpException\ServiceUnavailableException('coucou');
         self::assertEquals('Service Unavailable', $exception->getMessageStatus());

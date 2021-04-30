@@ -7,7 +7,10 @@ use PHPUnit\Framework\TestCase;
 class BadRequestExceptionTest extends TestCase
 {
 
-    public function test__construct()
+    /**
+     * test de __construct
+     **/
+    public function testConstruct(): void
     {
         $exception = new \HttpException\BadRequestException('coucou');
         self::assertEquals('Bad Request', $exception->getMessageStatus());

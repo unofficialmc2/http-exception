@@ -7,7 +7,10 @@ use PHPUnit\Framework\TestCase;
 class BadMappingMisdirectedRequestExceptionTest extends TestCase
 {
 
-    public function test__construct()
+    /**
+     * test de __construct
+     **/
+    public function testConstruct(): void
     {
         $exception = new \HttpException\BadMappingMisdirectedRequestException('coucou');
         self::assertEquals('Bad mapping / Misdirected Request', $exception->getMessageStatus());

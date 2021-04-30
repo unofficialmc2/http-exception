@@ -7,7 +7,10 @@ use PHPUnit\Framework\TestCase;
 class PaymentRequiredExceptionTest extends TestCase
 {
 
-    public function test__construct()
+    /**
+     * test de __construct
+     **/
+    public function testConstruct(): void
     {
         $exception = new \HttpException\PaymentRequiredException('coucou');
         self::assertEquals('Payment Required', $exception->getMessageStatus());

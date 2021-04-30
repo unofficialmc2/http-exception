@@ -7,7 +7,10 @@ use PHPUnit\Framework\TestCase;
 class LengthRequiredExceptionTest extends TestCase
 {
 
-    public function test__construct()
+    /**
+     * test de __construct
+     **/
+    public function testConstruct(): void
     {
         $exception = new \HttpException\LengthRequiredException('coucou');
         self::assertEquals('Length Required', $exception->getMessageStatus());

@@ -14,11 +14,10 @@ class %NOM% extends HttpException
     /**
      * %NOM% constructor.
      * @param string $message
-     * @param int $code = %CODE%
      * @param \Throwable|null $previous
      * @noinspection PhpUnusedParameterInspection
      */
-    public function __construct($message = "", $code = %CODE%, Throwable $previous = null)
+    public function __construct($message = "", ?Throwable $previous = null)
     {
         parent::__construct($message, %CODE%, $previous);
     }

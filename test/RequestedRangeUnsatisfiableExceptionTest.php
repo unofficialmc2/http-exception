@@ -7,7 +7,10 @@ use PHPUnit\Framework\TestCase;
 class RequestedRangeUnsatisfiableExceptionTest extends TestCase
 {
 
-    public function test__construct()
+    /**
+     * test de __construct
+     **/
+    public function testConstruct(): void
     {
         $exception = new \HttpException\RequestedRangeUnsatisfiableException('coucou');
         self::assertEquals('Requested range unsatisfiable', $exception->getMessageStatus());

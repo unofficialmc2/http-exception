@@ -7,7 +7,10 @@ use PHPUnit\Framework\TestCase;
 class NotImplementedExceptionTest extends TestCase
 {
 
-    public function test__construct()
+    /**
+     * test de __construct
+     **/
+    public function testConstruct(): void
     {
         $exception = new \HttpException\NotImplementedException('coucou');
         self::assertEquals('Not Implemented', $exception->getMessageStatus());

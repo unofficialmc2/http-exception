@@ -7,7 +7,10 @@ use PHPUnit\Framework\TestCase;
 class TooManyExceptionTest extends TestCase
 {
 
-    public function test__construct()
+    /**
+     * test de __construct
+     **/
+    public function testConstruct(): void
     {
         $exception = new \HttpException\TooManyException('coucou');
         self::assertEquals('Too Many', $exception->getMessageStatus());

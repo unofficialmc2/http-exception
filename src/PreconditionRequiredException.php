@@ -14,11 +14,10 @@ class PreconditionRequiredException extends HttpException
     /**
      * PreconditionRequiredException constructor.
      * @param string $message
-     * @param int $code = 428
      * @param \Throwable|null $previous
      * @noinspection PhpUnusedParameterInspection
      */
-    public function __construct($message = "", $code = 428, Throwable $previous = null)
+    public function __construct($message = "", ?Throwable $previous = null)
     {
         parent::__construct($message, 428, $previous);
     }

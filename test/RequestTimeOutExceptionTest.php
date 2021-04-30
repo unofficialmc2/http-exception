@@ -7,7 +7,10 @@ use PHPUnit\Framework\TestCase;
 class RequestTimeOutExceptionTest extends TestCase
 {
 
-    public function test__construct()
+    /**
+     * test de __construct
+     **/
+    public function testConstruct(): void
     {
         $exception = new \HttpException\RequestTimeOutException('coucou');
         self::assertEquals('Request Time-out', $exception->getMessageStatus());

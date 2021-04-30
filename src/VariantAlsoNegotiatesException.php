@@ -14,11 +14,10 @@ class VariantAlsoNegotiatesException extends HttpException
     /**
      * VariantAlsoNegotiatesException constructor.
      * @param string $message
-     * @param int $code = 506
      * @param \Throwable|null $previous
      * @noinspection PhpUnusedParameterInspection
      */
-    public function __construct($message = "", $code = 506, Throwable $previous = null)
+    public function __construct($message = "", ?Throwable $previous = null)
     {
         parent::__construct($message, 506, $previous);
     }

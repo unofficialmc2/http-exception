@@ -4,7 +4,7 @@
 
     <file>src</file>
     <file>test</file>
-    
+
     <arg name="colors"/>
     <arg name="parallel" value="75"/>
     <arg value="np"/>
@@ -22,6 +22,9 @@
     <rule ref="PSR1.Classes.ClassDeclaration.MultipleClasses">
         <exclude-pattern>test/*</exclude-pattern>
         <exclude-pattern>test/**/*</exclude-pattern>
+    </rule>
+    <rule ref="Generic.Files.LineEndings">
+        <exclude name="Generic.Files.LineEndings.InvalidEOLChar"/>
     </rule>
 
 </ruleset>
