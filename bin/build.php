@@ -5,6 +5,10 @@ declare(strict_types=1);
  * created at 2020-07-27
  */
 
+namespace Bin;
+
+use HttpException\HttpException;
+
 require __DIR__ . '/../vendor/autoload.php';
 
 $template = file_get_contents(__DIR__ . "/Template");
@@ -13,7 +17,7 @@ $templateTest = file_get_contents(__DIR__ . "/TemplateTest");
 /**
  * Class HE
  */
-class HE extends \HttpException\HttpException
+class HE extends HttpException
 {
 
     /**
@@ -25,6 +29,10 @@ class HE extends \HttpException\HttpException
     }
 }
 
+/**
+ * @param string $base
+ * @return string
+ */
 function getNomFrom(string $base): string
 {
     $base = str_replace("'", '', $base);
@@ -35,6 +43,11 @@ function getNomFrom(string $base): string
     return implode('', $words);
 }
 
+/**
+ * @param string $template
+ * @param array<string,string> $context
+ * @return string
+ */
 function replaceInTemplate(string $template, array $context): string
 {
     foreach ($context as $t => $v) {
@@ -68,13 +81,7 @@ foreach ($listeCode as $code => $message) {
 
     file_put_contents($filename, $php);
     file_put_contents($filenameTest, $test);
-// print_r([
-//     'CODE' => $code,
-//     'NOM' => $nom
-// ]);
-// echo PHP_EOL;
+
     echo __DIR__ . '/../src/' . $nom . '.php' . PHP_EOL;
     echo __DIR__ . '/../test/' . $nomTest . '.php' . PHP_EOL;
-// echo $php . PHP_EOL;
-
 }
