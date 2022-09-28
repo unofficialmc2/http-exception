@@ -3,7 +3,7 @@
   "description": "Collection d'exception pour g\u00e9rer les erreurs http",
   "type": "library",
   "require": {
-    "php": ">7.0"
+    "php": ">8.0"
   },
   "require-dev": {
     "ocramius/package-versions": "^2.1",
