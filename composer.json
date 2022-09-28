@@ -24,7 +24,11 @@
     "sort-packages": true
   },
   "scripts": {
-    "build": "php ./bin/build.php"
+    "build": "php ./bin/build.php",
+    "test": [
+      "phpcs",
+      "phpunit"
+    ]
   },
   "autoload": {
     "psr-4": {
