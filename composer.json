@@ -3,13 +3,13 @@
   "description": "Collection d'exception pour g\u00e9rer les erreurs http",
   "type": "library",
   "require": {
-    "php": "^8.3"
+    "php": "^8.5"
   },
   "require-dev": {
     "ocramius/package-versions": "^2.1",
-    "phpstan/phpstan": "^1.12",
-    "phpunit/phpunit": "^11.3",
-    "squizlabs/php_codesniffer": "^3.10"
+    "phpstan/phpstan": "^2.3",
+    "phpunit/phpunit": "^13.4",
+    "squizlabs/php_codesniffer": "^4.0"
   },
   "license": "MIT",
   "authors": [
